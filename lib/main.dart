@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const QuizApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class QuizApp extends StatelessWidget {
+  const QuizApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'So You Think You Know the Restoration?',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,9 +20,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Restoration Quizzes'),
     );
   }
 }
@@ -97,18 +95,23 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 52,
+                  color: Color.fromARGB(255, 123, 214, 045)),
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline2,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        tooltip:
+            '''Incrementation of the number that you see on the screen because we don\'t want that number to stay the same but rather it must continually increase in its size and breadth until you as the user restarts the application itself.''',
+        child: const Text("This string is most definitely waaayyyy too long to fit in a tiny button."),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
