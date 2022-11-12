@@ -12,6 +12,20 @@ class Question extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      margin: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          Text(
+            _questionText,
+            style: const TextStyle(
+              fontSize: 25,
+              fontFamily: 'Raleway',
+            ),
+          ),
+          _answers[0], //TODO: iterate over answers to display them all
+        ],
+      ),
+    );
   }
 }

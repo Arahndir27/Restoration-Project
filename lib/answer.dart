@@ -12,7 +12,16 @@ class Answer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      child: Button,
+      child: ElevatedButton(
+        onPressed: () {}, //TODO: Give onPressed function
+        child: Text(
+          _answerText,
+          style: const TextStyle(
+            fontSize: 16,
+            fontFamily: 'Raleway',
+          ),
+        ),
+      ),
     );
   }
 }

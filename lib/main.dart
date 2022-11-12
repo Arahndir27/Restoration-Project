@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 import 'answer.dart';
 import 'question.dart';
@@ -35,25 +34,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static final qz1_q1_a1 = Answer('correct', true);
-  static final qz1_q1_a2 = Answer('wrong', false);
+  static var qz1_q1_a1 = Answer('correct', true);
+  static var qz1_q1_a2 = Answer('wrong', false);
   static var qz1_q1_answers = [qz1_q1_a1, qz1_q1_a2];
-  var qz1_q1 = Question("This is a question", qz1_q1_answers);
+  static var qz1_q1 = Question('This is a question', qz1_q1_answers);
 
-  static final qz1_q2_a1 = Answer('correct', true);
-  static final qz1_q2_a2 = Answer('wrong', false);
+  static var qz1_q2_a1 = Answer('correct', true);
+  static var qz1_q2_a2 = Answer('wrong', false);
   static var qz1_q2_answers = [qz1_q2_a1, qz1_q2_a2];
-  var qz1_q2 = Question("This is a question AGAIN", qz1_q2_answers);
+  static var qz1_q2 = Question('This is a question AGAIN', qz1_q2_answers);
 
-  // final qz1_q1 = Question("_questionText", qz1_q1_answers);
+  static List<Question> quiz1Questions = [qz1_q1, qz1_q2];
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values.
-    });
-  }
+  // static var quiz1 = Quiz(quiz1Questions);
 
   @override
   Widget build(BuildContext context) {
@@ -64,21 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 52,
-                  color: Color.fromARGB(255, 123, 214, 045)),
-            ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline2,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Quiz('Test 1', quiz1Questions),
+                  ),
+                );
+              },
+              child: const Text('Quiz 1'),
             ),
           ],
         ),
