@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/material.dart';
 class Answer extends StatelessWidget {
   final String _answerText;
   final bool _correctAnswer;
+  late final VoidCallback onClick;
 
   Answer(this._answerText, this._correctAnswer);
 
@@ -13,7 +16,7 @@ class Answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {}, //TODO: Give onPressed function
+        onPressed: () => onClick(),
         child: Text(
           _answerText,
           style: const TextStyle(
@@ -23,5 +26,9 @@ class Answer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void setOnClick(VoidCallback onClick) {
+    this.onClick = onClick;
   }
 }

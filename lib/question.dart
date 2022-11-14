@@ -7,6 +7,7 @@ import 'answer.dart';
 class Question extends StatelessWidget {
   final String _questionText;
   List<Answer> _answers;
+  late final VoidCallback onClick;
 
   Question(this._questionText, this._answers);
 
@@ -16,16 +17,33 @@ class Question extends StatelessWidget {
       margin: const EdgeInsets.all(10),
       child: Column(
         children: [
-          Text(
-            _questionText,
-            style: const TextStyle(
-              fontSize: 25,
-              fontFamily: 'Raleway',
+          Center(
+            child: Text(
+              _questionText,
+              style: const TextStyle(
+                fontSize: 25,
+                fontFamily: 'Raleway',
+              ),
             ),
           ),
-          _answers[0], //TODO: iterate over answers to display them all
+          ListView.separated(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            padding: const EdgeInsets.all(8),
+            itemCount: _answers.length,
+            itemBuilder: (BuildContext context, int i) {
+              return Container(
+                child: _answers[i],
+              );
+            },
+            separatorBuilder: (BuildContext context, int i) => const Divider(),
+          ),
         ],
       ),
     );
+  }
+
+  void setOnClick(VoidCallback onClick) {
+    this.onClick = onClick;
   }
 }

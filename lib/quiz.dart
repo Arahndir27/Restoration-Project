@@ -22,6 +22,11 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
+    //Give the questions a callback function
+    // for (var q in widget._questions) {
+    //   q.setOnClick(_answerQuestion);
+    // }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -29,12 +34,18 @@ class _QuizState extends State<Quiz> {
         ),
       ),
       body: Center(
-        child: widget._questions[_questionIndex], //TODO: iterate over questions so go one at a time
+        child: widget._questions[_questionIndex],
       ),
     );
   }
 
-  void _answerQuestion(bool correct) {
-    
+  // bool _answerQuestion() {
+  //   return 
+  // }
+
+  void _processAnswer(bool correct) {
+    setState(() {
+      ++_questionIndex;
+    });
   }
 }
