@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'answer.dart';
-import 'question.dart';
+import 'zquestion.dart';
 import 'quiz.dart';
 
 void main() => runApp(const QuizApp());
@@ -34,19 +34,133 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static var qz1_q1_a1 = Answer('correct', true);
-  static var qz1_q1_a2 = Answer('wrong', false);
-  static var qz1_q1_answers = [qz1_q1_a1, qz1_q1_a2];
-  static var qz1_q1 = Question('This is a question', qz1_q1_answers);
+  //Answers
+  static var qz1_q1_a1 = Answer('9', true);
+  static var qz1_q1_a2 = Answer('1', false);
+  static var qz1_q1_a3 = Answer('3', false);
+  static var qz1_q1_a4 = Answer('12', false);
+  static var qz1_q1_answers = [qz1_q1_a4, qz1_q1_a3, qz1_q1_a1, qz1_q1_a2];
+  //Question
+  static var qz1_q1 =
+      'How many accounts of the first vision do we have? (Primary and Secondary accounts from Joseph Smith\'s day)';
+  static Map<String, List<Answer>> qz1_q1_map = {qz1_q1: qz1_q1_answers};
 
-  static var qz1_q2_a1 = Answer('correct', true);
-  static var qz1_q2_a2 = Answer('wrong', false);
-  static var qz1_q2_answers = [qz1_q2_a1, qz1_q2_a2];
-  static var qz1_q2 = Question('This is a question AGAIN', qz1_q2_answers);
+  //Answers
+  static var qz1_q2_a1 = Answer('German', true);
+  static var qz1_q2_a2 = Answer('Spanish', false);
+  static var qz1_q2_a3 = Answer('Hawaiian', false);
+  static var qz1_q2_a4 = Answer('Navajo', false);
+  static var qz1_q2_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q2 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q2_map = {qz1_q2: qz1_q2_answers};
 
-  static List<Question> quiz1Questions = [qz1_q1, qz1_q2];
+  //Answers
+  static var qz1_q3_a1 = Answer(
+      'One of the methodist preachers who was very active in the religion movement in New York',
+      true);
+  static var qz1_q3_a2 = Answer('His mother', false);
+  static var qz1_q3_a3 = Answer('His father', false);
+  static var qz1_q3_a4 = Answer('His brother Alvin', false);
+  static var qz1_q3_answers = [qz1_q2_a2, qz1_q2_a3, qz1_q2_a1, qz1_q2_a4];
+  //Question
+  static var qz1_q3 =
+      'According to the First Vision accounts, who was the first person Joseph Smith told about his vision?';
+  static Map<String, List<Answer>> qz1_q3_map = {qz1_q3: qz1_q3_answers};
 
-  // static var quiz1 = Quiz(quiz1Questions);
+  //Answers
+  static var qz1_q4_a1 = Answer('The eruption of Mt Tambora', true);
+  static var qz1_q4_a2 =
+      Answer('Joseph Smith Sr. got a new job in New York', false);
+  static var qz1_q4_a3 =
+      Answer('The Smith family was told to move there in a dream', false);
+  static var qz1_q4_a4 = Answer('They always lived there', false);
+  static var qz1_q4_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q4 =
+      'What led the Smith family to New York in the first place?';
+  static Map<String, List<Answer>> qz1_q4_map = {qz1_q4: qz1_q4_answers};
+
+  //Answers
+  static var qz1_q5_a1 = Answer('German', true);
+  static var qz1_q5_a2 = Answer('Spanish', false);
+  static var qz1_q5_a3 = Answer('Hawaiian', false);
+  static var qz1_q5_a4 = Answer('Navajo', false);
+  static var qz1_q5_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q5 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q5_map = {qz1_q5: qz1_q5_answers};
+
+  //Answers
+  static var qz1_q6_a1 = Answer('German', true);
+  static var qz1_q6_a2 = Answer('Spanish', false);
+  static var qz1_q6_a3 = Answer('Hawaiian', false);
+  static var qz1_q6_a4 = Answer('Navajo', false);
+  static var qz1_q6_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q6 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q6_map = {qz1_q6: qz1_q6_answers};
+
+  //Answers
+  static var qz1_q7_a1 = Answer('German', true);
+  static var qz1_q7_a2 = Answer('Spanish', false);
+  static var qz1_q7_a3 = Answer('Hawaiian', false);
+  static var qz1_q7_a4 = Answer('Navajo', false);
+  static var qz1_q7_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q7 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q7_map = {qz1_q7: qz1_q7_answers};
+
+  //Answers
+  static var qz1_q8_a1 = Answer('German', true);
+  static var qz1_q8_a2 = Answer('Spanish', false);
+  static var qz1_q8_a3 = Answer('Hawaiian', false);
+  static var qz1_q8_a4 = Answer('Navajo', false);
+  static var qz1_q8_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q8 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q8_map = {qz1_q8: qz1_q8_answers};
+
+  //Answers
+  static var qz1_q9_a1 = Answer('German', true);
+  static var qz1_q9_a2 = Answer('Spanish', false);
+  static var qz1_q9_a3 = Answer('Hawaiian', false);
+  static var qz1_q9_a4 = Answer('Navajo', false);
+  static var qz1_q9_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q9 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q9_map = {qz1_q9: qz1_q9_answers};
+
+  //Answers
+  static var qz1_q10_a1 = Answer('German', true);
+  static var qz1_q10_a2 = Answer('Spanish', false);
+  static var qz1_q10_a3 = Answer('Hawaiian', false);
+  static var qz1_q10_a4 = Answer('Navajo', false);
+  static var qz1_q10_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  //Question
+  static var qz1_q10 =
+      'What was the first language other than English for the First Vision to be recorded in?';
+  static Map<String, List<Answer>> qz1_q10_map = {qz1_q10: qz1_q10_answers};
+
+  //First Vision Quiz
+  static List<Map<String, List<Answer>>> quiz1 = [
+    qz1_q1_map,
+    qz1_q2_map,
+    qz1_q3_map,
+    qz1_q4_map,
+    qz1_q5_map,
+    qz1_q6_map,
+    qz1_q7_map,
+    qz1_q8_map,
+    qz1_q9_map,
+    qz1_q10_map
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +174,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             ElevatedButton(
+              //This is how you switch to a new screen
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Quiz('Test 1', quiz1Questions),
+                    builder: (context) => Quiz('Test 1', quiz1),
                   ),
                 );
               },

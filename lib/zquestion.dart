@@ -7,7 +7,7 @@ import 'answer.dart';
 class Question extends StatelessWidget {
   final String _questionText;
   List<Answer> _answers;
-  late final VoidCallback onClick;
+  late final Function()? onClick;
 
   Question(this._questionText, this._answers);
 

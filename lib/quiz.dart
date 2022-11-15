@@ -2,11 +2,11 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
-import 'question.dart';
+import 'answer.dart';
 
 class Quiz extends StatefulWidget {
   var _quizName;
-  final List<Question> _questions;
+  final List<Map<String, List<Answer>>> _questions;
 
   Quiz(this._quizName, this._questions);
 
@@ -15,18 +15,12 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  // var _quizName;
-  // late final List<Question> _questions;
   var _questionIndex = 0;
   var _numCorrect = 0;
+  var _quizFinished = false;
 
   @override
   Widget build(BuildContext context) {
-    //Give the questions a callback function
-    // for (var q in widget._questions) {
-    //   q.setOnClick(_answerQuestion);
-    // }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -34,18 +28,69 @@ class _QuizState extends State<Quiz> {
         ),
       ),
       body: Center(
-        child: widget._questions[_questionIndex],
+        child: Container(
+          margin: const EdgeInsets.all(10),
+          //Questions
+          child: Column(
+            children: [
+              Center(
+                child: Text(
+                  widget._questions[_questionIndex].keys.first,
+                  style: const TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'Raleway',
+                  ),
+                ),
+              ),
+              //Answers
+              ListView.separated(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                padding: const EdgeInsets.all(8),
+                //This is the length of the list of Objects (answers)
+                itemCount: widget
+                    ._questions[_questionIndex]
+                        [widget._questions[_questionIndex].keys.first]!
+                    .length,
+                itemBuilder: (BuildContext context, int i) {
+                  return Container(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () => {processAnswer()},
+                      child: Text(
+                        widget._questions[_questionIndex][widget
+                                ._questions[_questionIndex].keys.first]![i]
+                            .getAnswerText(),
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Raleway',
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                separatorBuilder: (BuildContext context, int i) =>
+                    const Divider(),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 
-  // bool _answerQuestion() {
-  //   return 
-  // }
+  void processAnswer() {
+    _incrementQuestion();
+  }
 
-  void _processAnswer(bool correct) {
+  void _incrementQuestion() {
     setState(() {
-      ++_questionIndex;
+      if (_questionIndex == (widget._questions.length - 1)) {
+        _quizFinished = true;
+        _questionIndex = 0;
+      } else {
+        ++_questionIndex;
+      }
     });
   }
 }
