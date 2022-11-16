@@ -162,6 +162,151 @@ class _MyHomePageState extends State<MyHomePage> {
     qz1_q10_map
   ];
 
+//-----------------------------------------------------------------------------------------------------------
+  //Answers
+  static var qz2_q1_a1 = Answer('March 1830', true);
+  static var qz2_q1_a2 = Answer('August 1830', false);
+  static var qz2_q1_a3 = Answer('December 1829', false);
+  static var qz2_q1_a4 = Answer('April 1830', false);
+  static var qz2_q1_answers = [qz2_q1_a1, qz2_q1_a4, qz2_q1_a2, qz2_q1_a3];
+  //Question
+  static var qz2_q1 = 'When was the Book of Mormon published?';
+  static Map<String, List<Answer>> qz2_q1_map = {qz2_q1: qz2_q1_answers};
+
+  //Answers
+  static var qz2_q2_a1 = Answer('Emma Smith', true);
+  static var qz2_q2_a2 = Answer('Hyrum Smith', false);
+  static var qz2_q2_a3 = Answer('Mary Whitmer', false);
+  static var qz2_q2_a4 = Answer('David Whitmer', false);
+  static var qz2_q2_answers = [qz2_q2_a2, qz2_q2_a1, qz2_q2_a3, qz2_q2_a4];
+  //Question
+  static var qz2_q2 =
+      'Which of the following people did NOT see the Golden Plates?';
+  static Map<String, List<Answer>> qz2_q2_map = {qz2_q2: qz2_q2_answers};
+
+  //Answers
+  static var qz2_q3_a1 = Answer('Martin Harris mortgaged his farm', true);
+  static var qz2_q3_a2 = Answer('The Smith family sold their farm', false);
+  static var qz2_q3_a3 = Answer(
+      'John Tanner, a wealthy convert to the church, paid for it', false);
+  static var qz2_q3_a4 =
+      Answer('The Church used its savings to pay for it', false);
+  static var qz2_q3_answers = [qz2_q3_a3, qz2_q3_a4, qz2_q3_a1, qz2_q3_a2];
+  //Question
+  static var qz2_q3 = 'How was the Book of Mormon publishing paid for?';
+  static Map<String, List<Answer>> qz2_q3_map = {qz2_q3: qz2_q3_answers};
+
+  //Answers
+  static var qz2_q4_a1 = Answer('True', false);
+  static var qz2_q4_a2 = Answer('False', true);
+  static var qz2_q4_answers = [qz2_q4_a1, qz2_q4_a2];
+  //Question
+  static var qz2_q4 =
+      'True or False: Joseph Smith only used the Urim and Thummim to translate the Book of Mormon';
+  static Map<String, List<Answer>> qz2_q4_map = {qz2_q4: qz2_q4_answers};
+
+  //Answers
+  static var qz2_q5_a1 = Answer('True', false);
+  static var qz2_q5_a2 = Answer('False', true);
+  static var qz2_q5_answers = [qz2_q5_a1, qz2_q5_a2];
+  //Question
+  static var qz2_q5 =
+      'True or False: The truthfulness of the Book of Mormon can be proven through academic, scholarly, and scientific means.';
+  static Map<String, List<Answer>> qz2_q5_map = {qz2_q5: qz2_q5_answers};
+
+  //Answers
+  static var qz2_q6_a1 = Answer('True', true);
+  static var qz2_q6_a2 = Answer('False', false);
+  static var qz2_q6_answers = [qz2_q6_a1, qz2_q6_a2];
+  //Question
+  static var qz2_q6 =
+      'True or False: Although each of the Three Witnesses of the Book of Mormon left the Church, none of them ever denied their testimony of the Book of Mormon.';
+  static Map<String, List<Answer>> qz2_q6_map = {qz2_q6: qz2_q6_answers};
+
+  //Answers
+  static var qz2_q7_a1 = Answer(
+      'It has the most correct descriptions and teachings of the Gospel, the way or means by which an individual can come unto Christ.',
+      true);
+  static var qz2_q7_a2 = Answer('It contains all truth.', false);
+  static var qz2_q7_a3 = Answer(
+      'No other books are worth reading because the Book of Mormon is so correct.',
+      false);
+  static var qz2_q7_a4 = Answer(
+      'It replaces all doctrines lost from the Bible, making it the only book of scripture we really need',
+      false);
+  static var qz2_q7_answers = [qz2_q7_a4, qz2_q7_a2, qz2_q7_a3, qz2_q7_a1];
+  //Question
+  static var qz2_q7 =
+      'How is the Book of Mormon the “most correct” of any book on earth?';
+  static Map<String, List<Answer>> qz2_q7_map = {qz2_q7: qz2_q7_answers};
+
+  //Answers
+  static var qz2_q8_a1 = Answer(
+      'Families could be sealed together for time and all eternity.', true);
+  static var qz2_q8_a2 =
+      Answer('What happens between death and the resurrection.', false);
+  static var qz2_q8_a3 = Answer('Little children don\'t need baptism.', false);
+  static var qz2_q8_a4 = Answer('Israel needs to be gathered.', false);
+  static var qz2_q8_answers = [qz2_q8_a4, qz2_q8_a1, qz2_q8_a3, qz2_q8_a2];
+  //Question
+  static var qz2_q8 =
+      'Which of the following doctrines is NOT found in the Book of Mormon?';
+  static Map<String, List<Answer>> qz2_q8_map = {qz2_q8: qz2_q8_answers};
+
+  //Answers
+  static var qz2_q9_a1 =
+      Answer('Through the Gift and Power of the Holy Ghost.', true);
+  static var qz2_q9_a2 = Answer('Through the testimony of others.', false);
+  static var qz2_q9_a3 =
+      Answer('An angel will appear to them and tell them it is true.', false);
+  static var qz2_q9_a4 = Answer('They can\'t; it is impossible.', false);
+  static var qz2_q9_answers = [qz2_q9_a2, qz2_q9_a3, qz2_q9_a1, qz2_q9_a4];
+  //Question
+  static var qz2_q9 =
+      'How does someone gain a testimony of the Book of Mormon?';
+  static Map<String, List<Answer>> qz2_q9_map = {qz2_q9: qz2_q9_answers};
+
+  //Answers
+  static var qz2_q10_a1 = Answer('Jesus is the Christ', false);
+  static var qz2_q10_a2 = Answer('Joseph Smith was a prophet', false);
+  static var qz2_q10_a3 = Answer('The Church of Jesus Christ of Latter Day Saints is the Lord\'s kingdom on the earth', false);
+  static var qz2_q10_a4 = Answer('All of the above!', true);
+  static var qz2_q10_answers = [qz2_q10_a1, qz2_q10_a2, qz2_q10_a3, qz2_q10_a4];
+  //Question
+  static var qz2_q10 = 'The Book of Mormon witnesses to all the world that:';
+  static Map<String, List<Answer>> qz2_q10_map = {qz2_q10: qz2_q10_answers};
+
+  //Book of Mormon Quiz
+  static List<Map<String, List<Answer>>> quiz2 = [
+    qz2_q1_map,
+    qz2_q2_map,
+    qz2_q3_map,
+    qz2_q4_map,
+    qz2_q5_map,
+    qz2_q6_map,
+    qz2_q7_map,
+    qz2_q8_map,
+    qz2_q9_map,
+    qz2_q10_map
+  ];
+
+//-----------------------------------------------------------------------------------------------------------
+//Answers
+  static var qz3_q1_a1 = Answer('9', true);
+  static var qz3_q1_a2 = Answer('1', false);
+  static var qz3_q1_a3 = Answer('3', false);
+  static var qz3_q1_a4 = Answer('12', false);
+  static var qz3_q1_answers = [qz3_q1_a4, qz3_q1_a3, qz3_q1_a1, qz3_q1_a2];
+  //Question
+  static var qz3_q1 =
+      'How many accounts of the first vision do we have? (Primary and Secondary accounts from Joseph Smith\'s day)';
+  static Map<String, List<Answer>> qz3_q1_map = {qz3_q1: qz3_q1_answers};
+
+
+//TODO: I think that each question needs to be related to an answer page. Choosing an answer will
+//TODO: take the user to this screen, where they will be told if they are correct and then given
+//TODO: some background on the answer and/or sources to the answer.
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
