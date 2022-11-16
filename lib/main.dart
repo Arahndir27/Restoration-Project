@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static var qz1_q3_a2 = Answer('His mother', false);
   static var qz1_q3_a3 = Answer('His father', false);
   static var qz1_q3_a4 = Answer('His brother Alvin', false);
-  static var qz1_q3_answers = [qz1_q2_a2, qz1_q2_a3, qz1_q2_a1, qz1_q2_a4];
+  static var qz1_q3_answers = [qz1_q3_a2, qz1_q3_a3, qz1_q3_a1, qz1_q3_a4];
   //Question
   static var qz1_q3 =
       'According to the First Vision accounts, who was the first person Joseph Smith told about his vision?';
@@ -76,76 +76,74 @@ class _MyHomePageState extends State<MyHomePage> {
   static var qz1_q4_a3 =
       Answer('The Smith family was told to move there in a dream', false);
   static var qz1_q4_a4 = Answer('They always lived there', false);
-  static var qz1_q4_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q4_answers = [qz1_q4_a1, qz1_q4_a3, qz1_q4_a4, qz1_q4_a2];
   //Question
   static var qz1_q4 =
       'What led the Smith family to New York in the first place?';
   static Map<String, List<Answer>> qz1_q4_map = {qz1_q4: qz1_q4_answers};
 
   //Answers
-  static var qz1_q5_a1 = Answer('German', true);
-  static var qz1_q5_a2 = Answer('Spanish', false);
-  static var qz1_q5_a3 = Answer('Hawaiian', false);
-  static var qz1_q5_a4 = Answer('Navajo', false);
-  static var qz1_q5_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q5_a1 = Answer('2 years', true);
+  static var qz1_q5_a2 = Answer('6 months', false);
+  static var qz1_q5_a3 = Answer('1 year', false);
+  static var qz1_q5_a4 = Answer('2 months', false);
+  static var qz1_q5_answers = [qz1_q5_a1, qz1_q5_a3, qz1_q5_a4, qz1_q5_a2];
   //Question
   static var qz1_q5 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'About how long did it take from when Joseph first started wondering which church he should join until he prayed about it in the Sacred Grove?';
   static Map<String, List<Answer>> qz1_q5_map = {qz1_q5: qz1_q5_answers};
 
   //Answers
-  static var qz1_q6_a1 = Answer('German', true);
-  static var qz1_q6_a2 = Answer('Spanish', false);
-  static var qz1_q6_a3 = Answer('Hawaiian', false);
-  static var qz1_q6_a4 = Answer('Navajo', false);
-  static var qz1_q6_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q6_a1 = Answer('A remission of his sins', true);
+  static var qz1_q6_a2 = Answer('A testimony that the Bible was true', false);
+  static var qz1_q6_a3 = Answer('Nothing else, just which church to join', false);
+  static var qz1_q6_a4 = Answer('Why his family was so impoverished', false);
+  static var qz1_q6_answers = [qz1_q6_a2, qz1_q6_a3, qz1_q6_a1, qz1_q6_a4];
   //Question
   static var qz1_q6 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'Besides a knowledge of which church was true, what else was Joseph seeking?';
   static Map<String, List<Answer>> qz1_q6_map = {qz1_q6: qz1_q6_answers};
 
   //Answers
-  static var qz1_q7_a1 = Answer('German', true);
-  static var qz1_q7_a2 = Answer('Spanish', false);
-  static var qz1_q7_a3 = Answer('Hawaiian', false);
-  static var qz1_q7_a4 = Answer('Navajo', false);
-  static var qz1_q7_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q7_a1 = Answer('Families could be sealed together for time and all eternity', true);
+  static var qz1_q7_a2 = Answer('Heavenly Father and Jesus Christ are 2 separate beings', false);
+  static var qz1_q7_a3 = Answer('He was God\'s son', false);
+  static var qz1_q7_a4 = Answer('No churches at the time were true', false);
+  static var qz1_q7_answers = [qz1_q7_a1, qz1_q7_a2, qz1_q7_a4, qz1_q7_a3];
   //Question
   static var qz1_q7 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'Which of the following truths did Joseph NOT learn as a result of the First Vision?';
   static Map<String, List<Answer>> qz1_q7_map = {qz1_q7: qz1_q7_answers};
 
   //Answers
-  static var qz1_q8_a1 = Answer('German', true);
-  static var qz1_q8_a2 = Answer('Spanish', false);
-  static var qz1_q8_a3 = Answer('Hawaiian', false);
-  static var qz1_q8_a4 = Answer('Navajo', false);
-  static var qz1_q8_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q8_a1 = Answer('True', false);
+  static var qz1_q8_a2 = Answer('False', true);
+  static var qz1_q8_answers = [qz1_q8_a1, qz1_q8_a2];
   //Question
   static var qz1_q8 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'True or False: The reality of the First Vision can be proven through academic, scholarly, or historical means.';
   static Map<String, List<Answer>> qz1_q8_map = {qz1_q8: qz1_q8_answers};
 
   //Answers
-  static var qz1_q9_a1 = Answer('German', true);
-  static var qz1_q9_a2 = Answer('Spanish', false);
-  static var qz1_q9_a3 = Answer('Hawaiian', false);
-  static var qz1_q9_a4 = Answer('Navajo', false);
-  static var qz1_q9_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q9_a1 = Answer('The Second Great Awakening', true);
+  static var qz1_q9_a2 = Answer('The First Great Awakening', false);
+  static var qz1_q9_a3 = Answer('The Sanctification of the States', false);
+  static var qz1_q9_a4 = Answer('The American Revolution', false);
+  static var qz1_q9_answers = [qz1_q9_a2, qz1_q9_a3, qz1_q9_a4, qz1_q9_a1];
   //Question
   static var qz1_q9 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'What was the name of the social movement that helped spur the First Vision?';
   static Map<String, List<Answer>> qz1_q9_map = {qz1_q9: qz1_q9_answers};
 
   //Answers
-  static var qz1_q10_a1 = Answer('German', true);
-  static var qz1_q10_a2 = Answer('Spanish', false);
-  static var qz1_q10_a3 = Answer('Hawaiian', false);
-  static var qz1_q10_a4 = Answer('Navajo', false);
-  static var qz1_q10_answers = [qz1_q2_a1, qz1_q2_a3, qz1_q2_a4, qz1_q2_a2];
+  static var qz1_q10_a1 = Answer('14', true);
+  static var qz1_q10_a2 = Answer('15', false);
+  static var qz1_q10_a3 = Answer('16', false);
+  static var qz1_q10_a4 = Answer('13', false);
+  static var qz1_q10_answers = [qz1_q10_a2, qz1_q10_a1, qz1_q10_a3, qz1_q10_a4];
   //Question
   static var qz1_q10 =
-      'What was the first language other than English for the First Vision to be recorded in?';
+      'How old was Joseph Smith when he received the First Vision?';
   static Map<String, List<Answer>> qz1_q10_map = {qz1_q10: qz1_q10_answers};
 
   //First Vision Quiz
@@ -324,11 +322,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Quiz('Test 1', quiz1),
+                    builder: (context) => Quiz('The First Vision', quiz1),
                   ),
                 );
               },
-              child: const Text('Quiz 1'),
+              child: const Text('The First Vision'),
+            ),
+            ElevatedButton(
+              //This is how you switch to a new screen
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Quiz('The Book of Mormon', quiz2),
+                  ),
+                );
+              },
+              child: const Text('The Book of Mormon'),
+            ),
+            ElevatedButton(
+              //This is how you switch to a new screen
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Quiz('The Doctrine and Covenants', quiz2), //TODO: change to 3
+                  ),
+                );
+              },
+              child: const Text('The Doctrine and Covenants'),
             ),
           ],
         ),
