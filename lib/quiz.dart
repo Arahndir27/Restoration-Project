@@ -1,12 +1,14 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:restoration_project_app/moreInfo.dart';
 
 import 'answer.dart';
+import 'question.dart';
 
 class Quiz extends StatefulWidget {
-  var _quizName;
-  final List<Map<String, List<Answer>>> _questions;
+  final _quizName;
+  final List<Map<Question, List<Answer>>> _questions;
 
   Quiz(this._quizName, this._questions);
 
@@ -39,7 +41,9 @@ class _QuizState extends State<Quiz> {
             children: [
               Center(
                 child: Text(
-                  widget._questions[_questionIndex].keys.first,
+                  widget._questions[_questionIndex].keys.first
+                      .getQuestionText(),
+                  textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 25,
                     fontFamily: 'Raleway',
@@ -59,15 +63,20 @@ class _QuizState extends State<Quiz> {
                 itemBuilder: (BuildContext context, int i) {
                   return Container(
                     width: double.infinity,
+                    //The actual answer button
                     child: ElevatedButton(
                       onPressed: () => {processAnswer()},
-                      child: Text(
-                        widget._questions[_questionIndex][widget
-                                ._questions[_questionIndex].keys.first]![i]
-                            .getAnswerText(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Raleway',
+                      child: Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Text(
+                          widget._questions[_questionIndex][widget
+                                  ._questions[_questionIndex].keys.first]![i]
+                              .getAnswerText(),
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Raleway',
+                          ),
                         ),
                       ),
                     ),
@@ -75,6 +84,23 @@ class _QuizState extends State<Quiz> {
                 },
                 separatorBuilder: (BuildContext context, int i) =>
                     const Divider(),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 100),
+                //The Show Answer button
+                child: ElevatedButton(
+                  onPressed: () => {
+                    _showMoreInfo(widget._questions[_questionIndex].keys.first
+                        .getMoreInfo())
+                  },
+                  child: const Text(
+                    'Show Answer',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Raleway',
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -96,5 +122,14 @@ class _QuizState extends State<Quiz> {
         ++_questionIndex;
       }
     });
+  }
+
+  void _showMoreInfo(moreInfo) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => moreInfo,
+      ),
+    );
   }
 }
