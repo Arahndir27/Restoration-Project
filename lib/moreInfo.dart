@@ -17,6 +17,7 @@ class MoreInfo extends StatelessWidget {
         // Here we take the value from the QuizApp object that was created by
         // the App.build method, and use it to set our appbar title.
         title: const Text('Learn More'),
+        backgroundColor: const Color.fromARGB(255, 119, 0, 255),
       ),
       body: Center(
         child: Column(

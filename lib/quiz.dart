@@ -5,6 +5,7 @@ import 'package:restoration_project_app/moreInfo.dart';
 
 import 'answer.dart';
 import 'question.dart';
+import 'results.dart';
 
 class Quiz extends StatefulWidget {
   final _quizName;
@@ -22,6 +23,7 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   var _questionIndex = 0;
+  var _displayQNum = '1';
   var _numCorrect = 0;
   var _quizFinished = false;
 
@@ -32,6 +34,7 @@ class _QuizState extends State<Quiz> {
         title: Text(
           widget._quizName,
         ),
+        backgroundColor: const Color.fromARGB(255, 119, 0, 255),
       ),
       body: Center(
         child: Container(
@@ -41,8 +44,10 @@ class _QuizState extends State<Quiz> {
             children: [
               Center(
                 child: Text(
-                  widget._questions[_questionIndex].keys.first
-                      .getQuestionText(),
+                  _displayQNum +
+                      '. ' +
+                      widget._questions[_questionIndex].keys.first
+                          .getQuestionText(),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 25,
@@ -65,7 +70,11 @@ class _QuizState extends State<Quiz> {
                     width: double.infinity,
                     //The actual answer button
                     child: ElevatedButton(
-                      onPressed: () => {processAnswer()},
+                      onPressed: () => {
+                        processAnswer(widget._questions[_questionIndex][widget
+                                ._questions[_questionIndex].keys.first]![i]
+                            .isCorrect())
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(5),
                         child: Text(
@@ -109,17 +118,26 @@ class _QuizState extends State<Quiz> {
     );
   }
 
-  void processAnswer() {
-    _incrementQuestion();
+  void processAnswer(bool correctAns) {
+    _incrementQuestion(correctAns);
   }
 
-  void _incrementQuestion() {
+  void _incrementQuestion(bool correctAns) {
+    if (correctAns) {
+      ++_numCorrect;
+    }
     setState(() {
       if (_questionIndex == (widget._questions.length - 1)) {
         _quizFinished = true;
-        _questionIndex = 0;
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Result(_numCorrect),
+          ),
+        );
       } else {
         ++_questionIndex;
+        _displayQNum = (_questionIndex + 1).toString();
       }
     });
   }

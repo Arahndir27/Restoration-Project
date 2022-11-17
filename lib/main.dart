@@ -367,6 +367,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the QuizApp object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        backgroundColor: const Color.fromARGB(255, 119, 0, 255),
       ),
       body: Center(
         child: Column(
@@ -408,9 +409,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 119, 0, 255),
-                ),
                 child: const Text('The First Vision'),
               ),
             ),
