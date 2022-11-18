@@ -21,7 +21,7 @@ class Result extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15, top: 50),
               child: Text(
-                'You got $_totalScore correct! Good Job!',
+                'You got $_totalScore correct!${_totalScore !< 6 ? ' Keep Trying!' : ' Good Job!'}',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 26,

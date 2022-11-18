@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
         'https://www.josephsmithpapers.org/paper-summary/orson-hyde-ein-ruf-aus-der-wste-1842-extract/3'
   };
   static var qz1_q2_linkList = [qz1_q2_link1, qz1_q2_link2];
-  static var qz1_q2_moreInfo = MoreInfo(qz1_q1_descr, qz1_q1_linkList);
+  static var qz1_q2_moreInfo = MoreInfo(qz1_q2_descr, qz1_q2_linkList);
   //Question
   static var qz1_q2 = Question(
       'What was the first language other than English for the First Vision to be recorded in?',
