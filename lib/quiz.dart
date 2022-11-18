@@ -17,10 +17,6 @@ class Quiz extends StatefulWidget {
   State<Quiz> createState() => _QuizState();
 }
 
-//TODO: I think that each question needs to be related to an answer page. Choosing an answer will
-//TODO: take the user to this screen, where they will be told if they are correct and then given
-//TODO: some background on the answer and/or sources to the answer.
-
 class _QuizState extends State<Quiz> {
   var _questionIndex = 0;
   var _displayQNum = '1';
@@ -44,10 +40,7 @@ class _QuizState extends State<Quiz> {
             children: [
               Center(
                 child: Text(
-                  _displayQNum +
-                      '. ' +
-                      widget._questions[_questionIndex].keys.first
-                          .getQuestionText(),
+                  '$_displayQNum. ${widget._questions[_questionIndex].keys.first.getQuestionText()}',
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 25,

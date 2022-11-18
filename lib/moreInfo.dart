@@ -34,7 +34,8 @@ class MoreInfo extends StatelessWidget {
                 ),
               ),
             ),
-            const Text(
+            //Only show the Sources title if there are links
+            (_links.isEmpty) ? const Text('') : const Text(
               'Sources: (clickable links)',
               style: TextStyle(fontSize: 24),
             ),
@@ -53,6 +54,7 @@ class MoreInfo extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 18,
+                        color: Color.fromARGB(255, 0, 0, 255)
                       ),
                     ),
                     onTap: () => launchUrl(
